@@ -12,7 +12,7 @@
 ## Install dependencies for server 
 ### `npm install`
 
-## Connnect to your mongodb
+### `Connnect to your mongodb`
 
 ### Server runs on http://localhost:4040 and client on http://localhost:3000
 
