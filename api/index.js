@@ -29,7 +29,6 @@ app.post('/api/transactions', async(req, res)=>{
     res.json(transaction);
 
 })
-
 app.get('/api/transactions', async(req, res)=>{
     //connect with database
     await mongoose.connect(process.env.MONGO_URL)
@@ -37,5 +36,11 @@ app.get('/api/transactions', async(req, res)=>{
     res.json(transaction)
 })
 
-//4040 for backend 3000 for react app=== start both at same time
-app.listen(4040);
+//4040 for backend, 3000 for react app=== start both at same time
+
+if(process.env.API_PORT){
+    app.listen(process.env.API_PORT);
+}
+
+//preparing for vercel deployment
+module.exports = app;
