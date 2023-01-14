@@ -38,6 +38,7 @@ app.get('/api/transactions', async(req, res)=>{
 
 //4040 for backend, 3000 for react app=== start both at same time
 
+//use this port if only running on local machine
 if(process.env.API_PORT){
     app.listen(process.env.API_PORT);
 }
